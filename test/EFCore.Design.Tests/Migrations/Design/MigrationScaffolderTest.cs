@@ -82,7 +82,8 @@ namespace Microsoft.EntityFrameworkCore.Migrations.Design
                     new MockHistoryRepository(),
                     reporter,
                     new MockProvider(),
-                    new SnapshotModelProcessor(reporter)));
+                    new SnapshotModelProcessor(reporter),
+                    services.GetRequiredService<IMigrator>()));
         }
 
         // ReSharper disable once UnusedTypeParameter
